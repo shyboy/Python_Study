@@ -6,7 +6,7 @@
 <meta name="keywords" content="Python学习,个人学习,Python编程从入门到实践">
 <meta name="description" content="Python编程从入门到实践学习记录">
 <meta name="author" content="Sunshy">
-<title>the second notes</title>
+<title>第五章if语句</title>
 <style>
 @font-face {
   font-family: octicons-anchor;
@@ -847,90 +847,90 @@ c:[{cN:"comment",b:/\(\*/,e:/\*\)/},e.ASM,e.QSM,e.CNM,{cN:"list",b:/\{/,e:/\}/,i
 
 </script><script>hljs.initHighlightingOnLoad();</script>
 <style> @media print{ .hljs{overflow: visible; word-wrap: break-word !important;} }</style></head><body><div class="markdown-body">
-<h1 id="toc_0">第二章 变量和简单数据类型</h1>
+<h1 id="toc_0">第五章 if语句</h1>
 
-<h2 id="toc_1">2.1 运行hello_world.py时发生的情况</h2>
+<h2 id="toc_1">知识点</h2>
 
-<p><code>print(&quot;Hello Python World!&quot;)</code><br/>
-运行后显示<code>Hello Python World!</code></p>
+<p><code>if:</code></p>
 
-<h2 id="toc_2">2.2 变量</h2>
-
-<p>增加一个变量，将文本给到变量<br/>
-<code>message = &quot;Hello Python World!&quot;<br/>
-print(message)</code><br/>
-运行后显示 <code>Hello Python World!</code></p>
-
-<h3 id="toc_3">2.2.1 变量的命名和使用</h3>
-
-<ul>
-<li>只能包含字母、数字和下划线，不能以数字开头；</li>
-<li>变量名不能包含空格，可以用下划线来连接单词；</li>
-<li>不能将python关键字和函数名作为变量名；</li>
-</ul>
-
-<h2 id="toc_4">2.3 字符串——第一种数据类型</h2>
-
-<blockquote>
-<p>字符串是一系列字符。用引号引起的都是字符串，可以是单引号也可以是双引号。</p>
-</blockquote>
-
-<p>如：<br/>
-<code>&quot;This is a string.&quot;</code>和<code>&#39;This is also string&#39;</code></p>
-
-<h3 id="toc_5">2.3.1 修改字符串的大小写</h3>
-
-<blockquote>
-<p>方法：使用函数<code>title()</code>、<code>upper()</code>和<code>lower()</code>。</p>
-</blockquote>
-
-<p>如：<br/>
-<strong>name.py</strong></p>
-
-<pre><code>name = &quot;ada lovelace&quot;
-print(name.title())
+<pre><code>if:
+else:
 </code></pre>
 
-<p>运行后显示 <code>Ada Lovelace</code><br/>
-方法title( )出现在变量的后面。方法是Python可对数据执行的操作。在name.title( )中，name后面的句点让Python对变量name执行方案title( )指定的操作。<br/>
-<strong>title( )</strong>以首字母大写的方式显示每个单词。<strong>upper( )</strong>全部转换为大写，<strong>lower( )</strong>全部转换为小写。</p>
-
-<h3 id="toc_6">2.3.2 合并拼接字符串</h3>
-
-<p>Python使用+号来合并字符串：</p>
-
-<pre><code>first_name = &quot;love&quot;
-last_name = &quot;you&quot;
-full_name = first_name + &quot; &quot; + last_name
-print(full_name)
+<pre><code>if:
+elif:
+else:
 </code></pre>
 
-<p>显示为 <code>love you</code><br/>
-结合字符串转换以及变量，可以优化为：</p>
+<h2 id="toc_2">作业</h2>
 
-<pre><code>first_name = &quot;loveme/136a&quot;
-last_name = &quot;you&quot;
-full_name = first_name + &quot; &quot; + last_name
-message = &quot;Hello,I &quot; + full_name.title() + &quot;!&quot;
-print(message)
+<p>5.3</p>
+
+<pre><code># alien_color = &#39;green&#39;
+# if alien_color == &#39;green&#39;:
+#     print(&#39;You got 5 points&#39;)
+
+# alien_color = &#39;blue&#39;
+# if alien_color == &#39;green&#39;:
+#     print(&#39;You got 5 points&#39;)
+
+alien_color = &#39;yellow&#39;
+if alien_color == &#39;green&#39;:
+    print(&#39;You got 5 points&#39;)
 </code></pre>
 
-<p>输出结果为：<code>Hello,I Love You!</code></p>
+<p>5.4</p>
 
-<h3 id="toc_7">2.3.3 使用制表符或转行符来添加空白</h3>
+<pre><code>alien_color = &#39;green&#39;
+if alien_color == &#39;green&#39;:
+    print(&#39;You have got 5 points&#39;)
+else:
+    print(&#39;You have got 10 points&#39;)
 
-<p>制表符：<code>\t</code>,换行符：<code>\n</code><br/>
-<strong>&gt;&gt;&gt;print(&quot;Languages:\n\tPython\n\tC\n\tJavaScript&quot;)</strong><br/>
-Languages:<br/>
-    Python<br/>
-    C<br/>
-    JavaScript</p>
+# alien_color = &#39;yellow&#39;
+# if alien_color == &#39;green&#39;:
+#     print(&#39;You have got 5 points&#39;)
+# else:
+#     print(&#39;You have got 10 points&#39;)
+</code></pre>
 
-<h3 id="toc_8">2.3.4 删除空白</h3>
+<p>5.5</p>
 
-<p>Python能找到字符串开头和末尾多余的空白。要确保字符串末尾没有空白，可使用方法rstrip()。<br/>
-方法的删除只是暂时的，如果要永久删除，必须将删除的结果返回到变量中去。<br/>
-剔除开头和两端的空白，可使用方法lstrip()和strip()。</p>
+<pre><code>alien_color = &#39;red&#39;
+if alien_color == &#39;green&#39;:
+    score = 5
+elif alien_color == &#39;yellow&#39;:
+    score = 10
+else:
+    score = 15
+print(&#39;You have got &#39;+ str(score)+ &#39; points.&#39;)
+</code></pre>
+
+<p>5.8-5.9</p>
+
+<pre><code>users1 = [&#39;admin&#39;,&#39;sunshy&#39;,&#39;alan&#39;,&#39;dreamger&#39;,&#39;yibasoya&#39;]
+users = []
+if users:
+    for user in users:
+        if user == &#39;admin&#39;:
+            print(&#39;&quot;Hello &#39; + user.title()+&#39;,would you like to see a status report?&quot;&#39;)
+        else:
+            print(&#39;&quot;Hello &#39;+ user.title()+&#39;,thank you for logging in again!&quot;&#39;)
+else:
+    print(&#39;&quot;We need to find some users!&quot;&#39;)
+</code></pre>
+
+<p>5.10</p>
+
+<pre><code>current_users = [&#39;admin&#39;,&#39;sunshy&#39;,&#39;alan&#39;,&#39;dreamger&#39;,&#39;yibasoya&#39;]
+current_users = [c_u.lower() for c_u in current_users]  #将原有的用户名列表元素转为小写后存入新的列表
+new_users = [&#39;sunshy&#39;,&#39;Alan&#39;,&#39;candy&#39;,&#39;sufe&#39;,&#39;god&#39;]
+for new_user in new_users:
+    if new_user.lower() in current_users: #将新用户名的名称转为小写，对比原有用户名的小写，检查是否有重名
+        print(new_user + &#39; is forbiden，please input another uers name.&#39;)
+    else:
+        print(new_user + &#39; is allowed,you can use this name.&#39;)
+</code></pre>
 
 <br><br><br><br>
 
